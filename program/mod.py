@@ -2,7 +2,7 @@ from functions import *
 from math import fabs, e
 
 class Fun:
-	# Stablicowane miejsca zerowe wielomianów Laguerre'a
+	# Stablicowane miejsca zerowe wielomianów wraz z wagami Laguerre'a
 	zeroes = [[0.585786437627, 3.414213562373], [0.415774556783, 2.294280360279, 6.289945082937],[0.322547689619, 1.745761101158, 4.536620296921, 9.395070912301],[0.263560319718, 1.413403059107, 3.596425771041, 7.085810005859, 12.640800844276]]
 	weights = [[0.853553390593, 0.146446609407], [0.711093009929, 0.278517733569, 0.0103892565016], [0.603154104342, 0.357418692438, 0.0388879085150, 0.000539294705561],[0.521755610583, 0.398666811083, 0.0759424496817 , 0.00361175867992, 0.0000233699723858]]
 	def __init__(self, n):
@@ -45,8 +45,6 @@ class Fun:
 		while i < n:
 			wynik += self.weights[n-2][i] * self.f(self.zeroes[n-2][i])
 			i += 1
-		# wynik = 0.853553390593 * self.f(0.585786437627)
-		# wynik += 0.146446609407 * self.f(3.414213562373)
 		return wynik
 
 	def rect(self, a, b, n):

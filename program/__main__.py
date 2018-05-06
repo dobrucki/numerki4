@@ -51,7 +51,7 @@ while True:
 	elif wybor == 4:
 		print("Podaj liczbe trapezów: ")
 		n = int(input("n: "))
-		wynik = fun.rect(a, b, n)
+		wynik = fun.trapez(a, b, n)
 	else:
 		print("Nieprawidlowy wybor!")
 		continue
